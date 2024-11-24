@@ -142,7 +142,12 @@ export default function CreatePostPage() {
             <Alert color="failure">{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <Image
+            // <Image
+            //   src={formData.image}
+            //   alt="upload"
+            //   className="w-full h-72 object-cover"
+            // />
+            <img
               src={formData.image}
               alt="upload"
               className="w-full h-72 object-cover"
