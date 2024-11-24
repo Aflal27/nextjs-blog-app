@@ -6,6 +6,7 @@ export const POST = async (req) => {
   try {
     await connect();
     const data = await req.json();
+    console.log("user", user);
 
     if (
       !user ||

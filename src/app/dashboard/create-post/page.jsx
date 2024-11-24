@@ -23,11 +23,12 @@ export default function CreatePostPage() {
   const [formData, setFormData] = useState({});
   const [publishError, setPublishError] = useState(null);
   const router = useRouter();
+  console.log(formData);
 
   const handleUpdloadImage = async (e) => {
     try {
       if (!file) {
-        setImageUploadError('Please select an image');
+        setImageUploadError("Please select an image");
         return;
       }
       // Use axios's upload progress tracking
@@ -69,7 +70,7 @@ export default function CreatePostPage() {
         setPublishError(data.message);
         return;
       }
-      if (res.ok) {
+      if (data) {
         setPublishError(null);
         router.push(`/post/${data.slug}`);
       }
