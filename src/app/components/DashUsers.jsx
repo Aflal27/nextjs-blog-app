@@ -33,7 +33,7 @@ export default function DashUsers() {
     if (user?.publicMetadata?.isAdmin) {
       fetchUsers();
     }
-  }, [user?.publicMetadata?.isAdmin]);
+  }, [user?.publicMetadata?.isAdmin, user?.publicMetadata?.userMongoId]);
 
   if (!user?.publicMetadata?.isAdmin && isLoaded) {
     return (
