@@ -1,5 +1,7 @@
 import CallToAction from "@/app/components/CallToAction";
 import RecentPosts from "@/app/components/RecentPosts";
+import Image from "next/image";
+
 import { Button } from "flowbite-react";
 import Link from "next/link";
 export default async function PostPage({ params }) {
@@ -36,11 +38,12 @@ export default async function PostPage({ params }) {
           {post && post.category}
         </Button>
       </Link>
-      <img
+      <Image
         src={post && post.image}
         alt={post && post.title}
         className="mt-10 p-3 max-h-[600px] w-full object-cover"
       />
+
       <div className="flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-2xl text-xs">
         <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>
         <span className="italic">

@@ -4,6 +4,8 @@ import { Table } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { useUser } from "@clerk/nextjs";
+import Image from "next/image";
+
 export default function DashUsers() {
   const { user, isLoaded } = useUser();
   const [users, setUsers] = useState([]);
@@ -59,7 +61,7 @@ export default function DashUsers() {
                     {new Date(user.createdAt).toLocaleDateString()}
                   </Table.Cell>
                   <Table.Cell>
-                    <img
+                    <Image
                       src={user.profilePicture}
                       alt={user.username}
                       className="w-10 h-10 object-cover bg-gray-500 rounded-full"

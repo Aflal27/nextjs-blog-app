@@ -2,6 +2,7 @@
 
 import { useUser } from "@clerk/nextjs";
 import { Alert, Button, FileInput, Select, TextInput } from "flowbite-react";
+import Image from "next/image";
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
@@ -141,7 +142,7 @@ export default function CreatePostPage() {
             <Alert color="failure">{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt="upload"
               className="w-full h-72 object-cover"

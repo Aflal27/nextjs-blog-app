@@ -10,6 +10,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useRouter, usePathname } from "next/navigation";
 import { uploadFileCloud } from "@/helper/upload";
+import Image from "next/image";
 
 export default function UpdatePost() {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -168,7 +169,7 @@ export default function UpdatePost() {
             <Alert color="failure">{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <img
+            <Image
               src={formData.image}
               alt="upload"
               className="w-full h-72 object-cover"

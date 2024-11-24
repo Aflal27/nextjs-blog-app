@@ -8,6 +8,8 @@ import {
 } from "react-icons/hi";
 import { Button, Table } from "flowbite-react";
 import { useUser } from "@clerk/nextjs";
+import Image from "next/image";
+
 import Link from "next/link";
 export default function DashboardComp() {
   const [users, setUsers] = useState([]);
@@ -122,7 +124,7 @@ export default function DashboardComp() {
                 <Table.Body key={user._id} className="divide-y">
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>
-                      <img
+                      <Image
                         src={user.profilePicture}
                         alt="user"
                         className="w-10 h-10 rounded-full bg-gray-500"
@@ -153,7 +155,7 @@ export default function DashboardComp() {
                 <Table.Body key={post._id} className="divide-y">
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>
-                      <img
+                      <Image
                         src={post.image}
                         alt="user"
                         className="w-14 h-10 rounded-md bg-gray-500"
