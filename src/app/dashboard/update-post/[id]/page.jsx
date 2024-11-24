@@ -169,7 +169,7 @@ export default function UpdatePost() {
             <Alert color="failure">{imageUploadError}</Alert>
           )}
           {formData.image && (
-            <Image
+            <img
               src={formData.image}
               alt="upload"
               className="w-full h-72 object-cover"

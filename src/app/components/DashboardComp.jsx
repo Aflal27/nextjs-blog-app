@@ -124,7 +124,7 @@ export default function DashboardComp() {
                 <Table.Body key={user._id} className="divide-y">
                   <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell>
-                      <Image
+                      <img
                         src={user.profilePicture}
                         alt="user"
                         className="w-10 h-10 rounded-full bg-gray-500"

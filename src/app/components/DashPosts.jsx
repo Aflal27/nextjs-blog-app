@@ -102,7 +102,7 @@ export default function DashPosts() {
                     </Table.Cell>
                     <Table.Cell>
                       <Link href={`/post/${post.slug}`}>
-                        <Image
+                        <img
                           src={post.image}
                           alt={post.title}
                           className="w-20 h-10 object-cover bg-gray-500"
