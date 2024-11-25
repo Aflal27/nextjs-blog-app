@@ -38,7 +38,7 @@ export default async function PostPage({ params }) {
           {post && post.category}
         </Button>
       </Link>
-      <Image
+      <img
         src={post && post.image}
         alt={post && post.title}
         className="mt-10 p-3 max-h-[600px] w-full object-cover"

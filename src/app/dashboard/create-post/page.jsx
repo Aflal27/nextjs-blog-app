@@ -110,6 +110,10 @@ export default function CreatePostPage() {
               <option value="javascript">JavaScript</option>
               <option value="reactjs">React.js</option>
               <option value="nextjs">Next.js</option>
+              <option value="nextjs">Html</option>
+              <option value="nextjs">Css</option>
+              <option value="nextjs">Php</option>
+              <option value="nextjs">C#</option>
             </Select>
           </div>
           <div className="flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3">
